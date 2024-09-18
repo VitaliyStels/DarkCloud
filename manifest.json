@@ -1,0 +1,28 @@
+{
+  "name": "DarkCloud",
+  "description": "SoundCloud Dark Theme",
+  "version": "2024.09",
+  "permissions": [],
+  "host_permissions": ["https://soundcloud.com/*"],
+  "icons": {"256": "darklogov3.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://soundcloud.com/*"],
+      "js": ["content.js"],
+      "css": ["css_dark.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "DarkCloud",
+    "default_icon":"darklogov3.png"
+  },
+
+  "manifest_version": 3,
+  "web_accessible_resources": [
+    {
+      "resources": ["css_dark.css"],
+      "matches": ["https://soundcloud.com/*"]
+    }
+  ]
+}
